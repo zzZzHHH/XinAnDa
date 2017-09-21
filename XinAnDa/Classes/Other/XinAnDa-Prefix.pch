@@ -1,0 +1,36 @@
+//
+//  XinAnDa-Prefix.pch
+//  XinAnDa
+//
+//  Created by 周立贺 on 17/6/30.
+//  Copyright © 2017年 周立贺. All rights reserved.
+//
+
+#import "UIView+Frame.h"
+
+#import "UIColor+HexColor.h"
+
+#import <Masonry.h>
+
+#import <UIScrollView+TPKeyboardAvoidingAdditions.h>
+
+#import "TPKeyboardAvoidingScrollView.h"
+
+#import <MJExtension/MJExtension.h>
+
+#define ScreenW [UIScreen mainScreen].bounds.size.width
+
+#define ScreenH [UIScreen mainScreen].bounds.size.height
+
+#define TabBarH 64
+
+#define ScreenSize [UIScreen mainScreen].bounds.size
+#define IsIphone6P ScreenSize.width==414
+#define IsIphone6 ScreenSize.width==375
+#define IsIphone5S ScreenSize.height==568
+//456字体大小  KIOS_Iphone456(iphone6p,iphone6,iphone5s,iphone4s)
+#define IphoneSize_Font(iphone6)  (IsIphone6P?iphone6+1:(IsIphone6?iphone6:(IsIphone5S?iphone6-2:iphone6-2)))
+#define IOS_Iphone456(iphone6p,iphone6,iphone5s,iphone4s) (IsIphone6P?iphone6p:(IsIphone6?iphone6:(IsIphone5S?iphone5s:iphone4s)))
+//宽  KIphoneSize_Widith(iphone6)  高 KIphoneSize_Height(iphone6)
+#define IphoneSize_Width(iphone6)  (IsIphone6P?1.104*iphone6:(IsIphone6?iphone6:(IsIphone5S?0.853*iphone6:0.853*iphone6)))
+#define IphoneSize_Height(iphone6)  (IsIphone6P?1.103*iphone6:(IsIphone6?iphone6:(IsIphone5S?0.851*iphone6:0.720*iphone6)))
